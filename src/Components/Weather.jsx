@@ -63,7 +63,7 @@ const[condition,setCondition]=useState('')
                     </div>
                 </div>
             ) : (
-                <h3 >No weather data available</h3>
+                <h3 >No weather data available Enter the City</h3>
             )}
 
 </div>
