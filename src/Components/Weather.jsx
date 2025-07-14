@@ -57,6 +57,8 @@ const[condition,setCondition]=useState('')
                             <p>Max Temp: {day.tempmax}°C</p>
                             <p>Min Temp: {day.tempmin}°C</p>
                             <p>Conditions: {day.conditions}°C</p>
+                            <p>Icon:{day.icon}</p>
+                            
                             <img src={condition} alt="" />
                         </div>
                     ))}
