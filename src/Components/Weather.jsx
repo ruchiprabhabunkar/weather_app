@@ -47,7 +47,8 @@ const[condition,setCondition]=useState('')
             {Array.isArray(weather.days) ? (
                 <div className="main-box">
                    <div className="header">
-                     <h2>15 DAYS FORECAST  <h3>City:{weather.address}</h3></h2>     
+                     <h2>15 DAYS FORECAST </h2>    
+                      <h3>City:{weather.address}</h3> 
                    </div>
                 <div className="main">
 
@@ -56,16 +57,14 @@ const[condition,setCondition]=useState('')
                             <h3>Date: {day.datetime}</h3>
                             <p>Max Temp: {day.tempmax}°C</p>
                             <p>Min Temp: {day.tempmin}°C</p>
-                            <p>Conditions: {day.conditions}°C</p>
                             <p>Icon:{day.icon}</p>
-                            
-                            <img src={condition} alt="" />
+                        {day.icon === "rain" || day.icon === "cloudy" || day.icon === "partly-cloudy-day" ? <img src={rainy} alt="" srcset="" /> : <img src={clear} alt="" srcset="" /> || <img src={partial} alt="" srcset="" /> }
                         </div>
                     ))}
                     </div>
                 </div>
             ) : (
-                <h3 >No weather data available Enter the City</h3>
+                <h3>No weather data available Please Enter the City</h3>
             )}
 
 </div>

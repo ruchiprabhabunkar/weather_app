@@ -23,32 +23,37 @@ button{
 }
 .header{
 background-color: lightblue;
+ border-radius: 4px;
+display: flex;
+justify-content: space-between;
+margin: 20px 0;
 width: 80%;
-margin: 5px 0  5px 200px;
+justify-self: center;
+align-items: center;
 }
 .header h3{
-float: right;
+margin: 10px 20px;
     width: fit-content;
-    margin: 0 00px 0 800px  ;
+  
 
 }
 .header h2{
     width: fit-content;
-    margin: 10PX 0;
+   margin: 10px 20px;
 }
 .main{
 display: grid;
-grid-template-columns: auto auto auto auto auto;
+grid-template-columns: auto auto auto auto ;
 column-gap: 50px;
 row-gap: 30px;
 
 }
 
-.cards{
-    width: 35vh;
-    height: 42vh;
+.cards{ 
     margin: 20px  ;
     border: solid black;
+    border-radius: 4px;
+    padding: 10px;
 }
 .cards img{
     width: 10vh;
