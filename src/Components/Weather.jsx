@@ -7,7 +7,7 @@ import './Weather.css'
 const About = () => {
     const [weather, setWeather] = useState('');
     const [city,setCity]=useState('');
-const[condition,setCondition]=useState('')
+// const[condition,setCondition]=useState('')
  const weatherData = async () => {
         try {
             const url = await fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}?unitGroup=metric&key=LG9UYQWNRRKGZQLDL7H4NG3HS&contentType=json`);
@@ -18,23 +18,23 @@ const[condition,setCondition]=useState('')
             console.error('Error fetching Weather Data:', error);
         }
     }
-    const checkCondition =(conditions) => {
-        if (conditions === "Partially cloudy") {
-            setCondition(partial);
-        } else if (conditions === "Clear") {
-            setCondition(clear);
-        } else if (conditions === "Rain") {
-            setCondition(rainy);
-        } else {
-            setCondition('');
-        }
-    }   
+    // const checkCondition =(conditions) => {
+    //     if (conditions === "Partially cloudy") {
+    //         setCondition(partial);
+    //     } else if (conditions === "Clear") {
+    //         setCondition(clear);
+    //     } else if (conditions === "Rain") {
+    //         setCondition(rainy);
+    //     } else {
+    //         setCondition('');
+    //     }
+    // }   
      
     useEffect(() => {
         
-        if (weather && weather.days && weather.days.length > 0) {
-            checkCondition(weather.days[0].conditions);
-        }
+        // if (weather && weather.days && weather.days.length > 0) {
+        //     checkCondition(weather.days[0].conditions);
+        // }
     }, [weather]);
 
     return (
